@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safari de avistamientos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Safari de avistamientos</h1>
+        <p>Registra y explora la fauna de nuestro safari virtual</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Nuevo avistamiento</h2>
+            <form id="sightning-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre del animal:</label>
+                    <input type="text" id="nombre" required placeholder="Ej: León, Águila...">
+                </div>
+
+                <div class="form-group">
+                    <label for="habitat">Hábitat:</label>
+                    <input type="text" id="habitat" required placeholder="Ej: Selva, Pradera...">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo de comportamiento / Categoría:</label>
+                    <select id="tipo" required>
+                        <option value="general">Animal general</option>
+                        <option value="depredeador">Depredador (con ataque)</option>
+                        <option value="volador">Volador (con altitud)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="extra">Detalle especial:</label>
+                    <input type="text" id="extra" placeholder="...">
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" rows="3" required placeholder="Describe el avistamiento..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Registrar avistamiento</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Bitácora de avistamientos</h2>
+        <div id="sightnings-container" class="grid-cards"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Safari virtual - Conservación y Tecnología</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
